@@ -1,0 +1,1 @@
+var port=chrome.extension.connect({name:"Sample Communication"});$(function(){$("#redirector").click(function(){chrome.windows.getCurrent(function(w){chrome.tabs.getSelected(w.id,function(t){port.postMessage(t);window.close();})})})})
