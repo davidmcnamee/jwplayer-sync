@@ -23,6 +23,12 @@ let interval: any = null;
 
 io.on("connection", (socket) => {
   console.log("New client connected");
+  
+  // socket.on('join', (data) => {
+    
+  //   socket.join(data);
+  // })
+
   if (interval) {
     clearInterval(interval);
   }
